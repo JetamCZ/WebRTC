@@ -2,12 +2,7 @@ const socket = io('/')
 
 let peers = []
 
-const peer = new Peer(
-    {
-        host: 'localhost',
-        port: '3001'
-    }
-)
+const peer = new Peer()
 
 peer.on('open', id => {
     socket.emit('join-room', ROOM_ID, id)
