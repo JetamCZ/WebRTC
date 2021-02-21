@@ -4,7 +4,7 @@ let peers = []
 
 const peer = new Peer(
     {
-        host: '192.168.1.127',
+        host: 'localhost',
         port: '3001'
     }
 )
