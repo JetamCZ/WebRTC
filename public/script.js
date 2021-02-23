@@ -17,6 +17,10 @@ getUserMedia({video: true, audio: true})
         video.muted = true
         addVideoStream(video, myStream)
     })
+    .catch(e => {
+        console.log(e)
+        document.getElementById("error").innerText = e.message;
+    })
 
 //Make call to new users
 socket.on('user-connected', strangerId => {
@@ -50,6 +54,7 @@ peer.on('call', (call) => {
 
             callManager(call)
         })
+
 })
 
 function callManager(call) {
