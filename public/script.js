@@ -16,6 +16,8 @@ getUserMedia({video: true, audio: true})
         const video = document.createElement('video')
         video.muted = true
         addVideoStream(video, myStream)
+
+        document.getElementById("error").innerText = "GOT video";
     })
     .catch(e => {
         console.log(e)
