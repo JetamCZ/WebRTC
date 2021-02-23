@@ -11,6 +11,11 @@ peer.on('open', id => {
 
 const getUserMedia = navigator.mediaDevices.getUserMedia
 
+getUserMedia({audio: true}).then((s) => {
+    console.log("GOT audio")
+}).catch((e) => console.log("audio", e))
+
+
 getUserMedia({audio: true, video: true})
     .then((myStream) => {
         const video = document.createElement('video')
