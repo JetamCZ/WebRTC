@@ -16,7 +16,7 @@ getUserMedia({audio: true}).then((s) => {
 }).catch((e) => console.log("audio", e))
 
 
-getUserMedia({audio: true, video: true})
+getUserMedia({video: true})
     .then((myStream) => {
         const video = document.createElement('video')
         video.muted = true
