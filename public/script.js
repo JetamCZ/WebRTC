@@ -11,7 +11,7 @@ peer.on('open', id => {
 
 const getUserMedia = navigator.mediaDevices.getUserMedia
 
-getUserMedia({video: true, audio: true})
+getUserMedia({audio: true, video: true})
     .then((myStream) => {
         const video = document.createElement('video')
         video.muted = true
